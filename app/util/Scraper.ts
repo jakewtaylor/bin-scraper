@@ -1,5 +1,6 @@
-import puppeteer from "puppeteer";
+import type puppeteer from "puppeteer";
 import { parse, compareAsc, formatISO, parseISO } from "date-fns";
+import { createBrowser } from "./createBrowser.server";
 
 const config = {
   cookies: {
@@ -141,11 +142,7 @@ class Scraper {
 }
 
 export const createScraper = async () => {
-  const browser = await puppeteer.launch({
-    // headless: false,
-    // slowMo: 250,
-    // devtools: true,
-  });
+  const browser = await createBrowser();
 
   const page = await browser.newPage();
 
