@@ -1,6 +1,6 @@
 import Redis from "ioredis";
 
-const client = new Redis();
+const client = new Redis(process.env.REDIS_URL!);
 
 const ttl = 1000 * 60 * 6; // 6 hours
 
