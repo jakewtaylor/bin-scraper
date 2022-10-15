@@ -20,8 +20,6 @@ export const loader: LoaderFunction = async () => {
 export default function Index() {
   const { binDay } = useLoaderData<LoaderData>();
 
-  console.log(binDay);
-
   return (
     <div
       className={`h-full w-full flex items-center justify-center p-2 ${
