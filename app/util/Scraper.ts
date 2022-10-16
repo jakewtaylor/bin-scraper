@@ -1,4 +1,4 @@
-import type puppeteer from "puppeteer";
+import type puppeteer from "puppeteer-core";
 import { parse, compareAsc, formatISO, parseISO } from "date-fns";
 import { createBrowser } from "./createBrowser.server";
 
